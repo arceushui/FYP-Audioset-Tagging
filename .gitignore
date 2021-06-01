@@ -1,0 +1,14 @@
+*.sh
+*.out
+*.err
+
+checkpoints_downloaded/*.pth
+checkpoints/
+__pycache__/
+_logs/
+logs/
+datasets/
+workspaces/
+results/
+statistics/
+!runme.sh
