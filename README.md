@@ -51,10 +51,15 @@ python pytorch/test_model_project.py test --workspace=$WORKSPACE  --window_size=
 ## Dataset & Model
 
 - Pretrain Model Link
+
 https://entuedu-my.sharepoint.com/:u:/r/personal/pang0208_e_ntu_edu_sg/Documents/20_percent_Cnn14._no_overlap.pth?csf=1&web=1&e=h4FiLm
 
-- Pretrain Dataset Link TBD
-- Finetune Dataset Link TBD
+- Pretrain Dataset Link 
+Please proceed to lab cluster. The file is in /home3/pang0208/AudioSet_Subset_Classification/datasets/audioset201906.tar.gz
+
+- Finetune Dataset Link 
+https://entuedu-my.sharepoint.com/:u:/g/personal/pang0208_e_ntu_edu_sg/EY1HvvVQ3MFPmlyh0pAc-ecBWoRZTJ77N5pWynZog4UuLQ?e=cOFvcj
+
 - FInetune Dataset Other Link TBD
 
 ## Usage
