@@ -59,7 +59,7 @@ Please proceed to lab cluster. The file is in /home3/pang0208/AudioSet_Subset_Cl
 - Finetune Dataset Link: 
 https://entuedu-my.sharepoint.com/:u:/g/personal/pang0208_e_ntu_edu_sg/EY1HvvVQ3MFPmlyh0pAc-ecBWoRZTJ77N5pWynZog4UuLQ?e=cOFvcj
 
-- FInetune Dataset Other Link TBD
+- FInetune Dataset Other Link: https://entuedu-my.sharepoint.com/:u:/g/personal/pang0208_e_ntu_edu_sg/EUICl8EyH31DtbON_NMv1roBCUCE0L3Ju6Kmw1Ccw-JrSQ?e=U2B0kl
 
 ## Usage
 Users can train the model from scratch by executing the commands in runme.sh. The runme.sh consists of three parts. 1. Pack downloaded wavs to hdf5 file to speed up loading. 2. Pretrain. 3. Finetune.
