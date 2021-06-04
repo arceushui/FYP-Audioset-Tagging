@@ -51,15 +51,15 @@ python pytorch/test_model_project.py test --workspace=$WORKSPACE  --window_size=
 ## Dataset & Model
 
 - Pretrain Model Link:
-https://entuedu-my.sharepoint.com/:u:/r/personal/pang0208_e_ntu_edu_sg/Documents/20_percent_Cnn14._no_overlap.pth?csf=1&web=1&e=h4FiLm
+https://entuedu-my.sharepoint.com/:u:/g/personal/pang0208_e_ntu_edu_sg/EThQO0UW705HhZ8x9pca7IYBHJyz42iDZ_GCSJ6Gxr8TXw?e=iDfa6O
 
 - Pretrain Dataset Link: 
 Please proceed to lab cluster. The file is in /home3/pang0208/AudioSet_Subset_Classification/datasets/audioset201906.tar.gz
 
 - Finetune Dataset Link: 
-https://entuedu-my.sharepoint.com/:u:/g/personal/pang0208_e_ntu_edu_sg/EY1HvvVQ3MFPmlyh0pAc-ecBWoRZTJ77N5pWynZog4UuLQ?e=cOFvcj
+https://entuedu-my.sharepoint.com/:u:/g/personal/pang0208_e_ntu_edu_sg/EY1HvvVQ3MFPmlyh0pAc-ecBMJYTRqWvbWwaqKz_t0qQ1g?e=6TMxBr
 
-- FInetune Dataset Other Link: https://entuedu-my.sharepoint.com/:u:/g/personal/pang0208_e_ntu_edu_sg/EUICl8EyH31DtbON_NMv1roBCUCE0L3Ju6Kmw1Ccw-JrSQ?e=U2B0kl
+- FInetune Dataset Other Link: https://entuedu-my.sharepoint.com/:u:/g/personal/pang0208_e_ntu_edu_sg/EUICl8EyH31DtbON_NMv1roBK5-54lp7n5hTA_8KccBU3g?e=xFXxCz
 
 ## Usage
 Users can train the model from scratch by executing the commands in runme.sh. The runme.sh consists of three parts. 1. Pack downloaded wavs to hdf5 file to speed up loading. 2. Pretrain. 3. Finetune.
