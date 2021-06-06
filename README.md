@@ -47,6 +47,51 @@ CHECKPOINT_FILE_NAME='20_percent_Cnn14.pth'
 
 python pytorch/test_model_project.py test --workspace=$WORKSPACE  --window_size=1024 --hop_size=320 --mel_bins=64 --fmin=50 --fmax=14000 --model_type='Cnn14' --loss_type='clip_bce' --augmentation='mixup' --batch_size=32 --learning_rate=1e-3 --cuda --split_id=4 --checkpoint_source_dir=$CHECKPOINT_SOURCE_DIR --checkpoint_file_name=$CHECKPOINT_FILE_NAME
 ```
+
+## Dataset & Model
+
+- Pretrain Model Link:
+https://entuedu-my.sharepoint.com/:u:/g/personal/pang0208_e_ntu_edu_sg/EThQO0UW705HhZ8x9pca7IYBHJyz42iDZ_GCSJ6Gxr8TXw?e=iDfa6O
+
+- Pretrain Dataset Link: 
+Please proceed to lab cluster. The file is in /home3/pang0208/AudioSet_Subset_Classification/datasets/audioset201906.tar.gz
+
+- Finetune Dataset Link: 
+https://entuedu-my.sharepoint.com/:u:/g/personal/pang0208_e_ntu_edu_sg/EY1HvvVQ3MFPmlyh0pAc-ecBMJYTRqWvbWwaqKz_t0qQ1g?e=6TMxBr
+
+- FInetune Dataset Other Link: https://entuedu-my.sharepoint.com/:u:/g/personal/pang0208_e_ntu_edu_sg/EUICl8EyH31DtbON_NMv1roBK5-54lp7n5hTA_8KccBU3g?e=xFXxCz
+
+## Usage
+Users can train the model from scratch by executing the commands in runme.sh. The runme.sh consists of three parts. 1. Pack downloaded wavs to hdf5 file to speed up loading. 2. Pretrain. 3. Finetune.
+
+### Command Options
+
+| Name                    | Type     | Default                              | Description                                                            |
+| ---------------------   | -------- | ------------------------------------ | ----------------------------------------------------------------       |
+| pretrain_dataset        | `string` | `./datasets/audioset201906`          | Pretrain dataset path                                                  |
+| workspace\*             | `string` | `./workspaces/audioset_tagging`      | Workspaces path for hdf waveforms and indexes as well as results       |
+| finetune_dataset        | `string` | `./datasets/audioset_project`        | Finetune dataset path                                                  |
+| finetune_dataset_others | `string` | `./datasets/audioset_project_others` | Finetune dataset path for others class                                 |
+| checkpoint_path         | `string` | `./checkpoints_downloaded`           | Path for pretrain model and finetune model(for testing)                |
+| checkpoint_file         | `string` | `20_percent_Cnn14.pth`               | Pretrain model file name                                               |
+| pretrain                | `bool`   | `false`                              | False: Run fintune, True: Run pretrain                                 |
+| pretrain_pack_data      | `bool`   | `true`                               | (Pretrain) Whether to create hdf5. Can disable if hdf5 data is created |
+| finetune_pack_data      | `bool`   | `true`                               | (Finetune) Whether to create hdf5. Can disable if hdf5 data is created |
+
+\* required options
+
+### Examples
+
+#### Pretrain
+```sh
+bash runme.sh --pretrain_dataset ./datasets/audioset_pretraining --finetune_dataset ./datasets/audioset_project --finetune_dataset_others ./datasets/audioset_project_others --workspace ./workspaces/audioset_tagging --finetune_pack_data false --pretrain true --pretrain_pack_data false
+```
+
+#### Finetune
+```sh
+bash runme.sh --pretrain_dataset ./datasets/audioset_pretraining --finetune_dataset ./datasets/audioset_project --finetune_dataset_others ./datasets/audioset_project_others --workspace ./workspaces/audioset_tagging --finetune_pack_data false --pretrain false --pretrain_pack_data false
+```
+
 ## Results
 
 | Model  | Pretrain Data | mAP |
